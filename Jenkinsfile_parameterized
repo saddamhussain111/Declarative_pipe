@@ -4,7 +4,8 @@ pipeline {
  
     parameters {
     gitParameter branchFilter: 'origin/(.*)', defaultValue: 'origin/master', name: 'BRANCH', type: 'PT_BRANCH'
-         
+
+        string(defaultValue: 'origin/master', description: 'Git branch', name: 'BRANCH')
         booleanParam(defaultValue: false, description: '', name: 'mvn_build')
         booleanParam(defaultValue: false, description: '', name: 'publish_to_nexus')
   
