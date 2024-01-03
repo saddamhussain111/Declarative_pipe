@@ -72,7 +72,7 @@ pipeline {
                             nexusUrl: NEXUS_URL,
                             groupId: pom.groupId,
                             version: '${BUILD_NUMBER}',
-                            repository: NEXUS_REPOSITORY,
+                            repository: ncodeit-scripted,
                             credentialsId: NEXUS_CREDENTIAL_ID,
                             artifacts: [
                                 // Artifact generated such as .jar, .ear and .war files.
